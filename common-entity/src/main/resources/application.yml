@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: INFO
+    com.example.demo: TRACE
+
+spring:
+  application:
+    name: common-entity

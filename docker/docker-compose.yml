@@ -1,0 +1,29 @@
+name: micro-stack
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=micro-stack
+    ports:
+      - 13306:3306
+#  redis:
+#    image: redis:7.4
+#    ports:
+#      - 6379:6379
+#  rabbitmq:
+#    image: rabbitmq:4.0-management
+#    ports:
+#      - 5672:5672
+#      - 15672:15672
+#  consul-server1:
+#    image: hashicorp/consul:1.19
+#    depends_on:
+#      - vault-server
+#    ports:
+#      - 8300:8300/tcp
+#      - 8500:8500/tcp
+#      - 8600:8600/tcp
+#      - 8600:8600/udp
+#    command: consul agent -server -bootstrap-expect=1 -ui -client=0.0.0.0 -data-dir=/consul/data
