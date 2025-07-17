@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserInfoDto {
-
-  private Long userInfoId;
+public class AccountProfileDto {
 
   private String firstName;
 
@@ -32,4 +30,6 @@ public class UserInfoDto {
   private String postalCode;
 
   private String country;
+
+  private Long accountId;
 }

@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-import com.example.demo.entity.AccountProfile;
+import com.example.demo.enumeration.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,19 +14,15 @@ import java.util.List;
 @NoArgsConstructor
 public class UserDto {
 
-  private Long userId;
+  private Long id;
 
   private String username;
 
   private String password;
 
+  private UserStatus status;
+
+  private List<AccountDto> accounts;
+
   private List<RoleDto> roles;
-
-  private Long userInfoId;
-
-  private Long tenantId;
-
-  private AccountProfile accountProfile;
-
-  private TenantDto tenant;
 }

@@ -12,7 +12,6 @@ import java.util.Objects;
 @Table(name = "users_roles")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserRole extends Auditable {

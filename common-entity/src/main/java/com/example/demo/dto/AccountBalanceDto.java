@@ -1,18 +1,17 @@
 package com.example.demo.dto;
 
-import com.example.demo.entity.Account;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class WalletBalanceDto {
-
-  private Long walletBalanceId;
+public class AccountBalanceDto {
 
   private String currencyCode;
 
@@ -22,5 +21,11 @@ public class WalletBalanceDto {
 
   private Long availableBalanceAmount;
 
-  private Account account;
+  private BigDecimal balanceAmountDisplay;
+
+  private BigDecimal lockedBalanceAmountDisplay;
+
+  private BigDecimal availableBalanceAmountDisplay;
+
+  private Long accountId;
 }

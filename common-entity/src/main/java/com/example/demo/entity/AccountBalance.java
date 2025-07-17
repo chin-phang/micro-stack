@@ -9,7 +9,6 @@ import java.util.Objects;
 @Table(name = "account_balances")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class AccountBalance extends Auditable {

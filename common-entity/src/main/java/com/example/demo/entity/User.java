@@ -17,7 +17,6 @@ import java.util.Objects;
 @Table(name = "users")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class User extends Auditable implements UserDetails {
@@ -38,7 +37,7 @@ public class User extends Auditable implements UserDetails {
   private UserStatus status;
 
   @OneToMany(mappedBy = Account_.USER)
-  private List<Account> accounts;
+  private List<Account> accounts = new ArrayList<>();
 
   @OneToMany(mappedBy = UserRole_.USER, cascade = CascadeType.ALL, orphanRemoval = true)
   private List<UserRole> roles = new ArrayList<>();

@@ -12,7 +12,6 @@ import java.util.Objects;
 @Table(name = "merchants")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Merchant extends Auditable {

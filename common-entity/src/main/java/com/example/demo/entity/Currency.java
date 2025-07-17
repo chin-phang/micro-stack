@@ -9,7 +9,6 @@ import java.util.Objects;
 @Table(name = "currencies")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString

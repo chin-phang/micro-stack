@@ -1,23 +1,23 @@
 package com.example.demo.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class CurrencyDto {
 
-  private Long currencyId;
+  private String country;
 
-  private String currencyCountry;
+  private String name;
 
-  private String currencyName;
+  private String code;
 
-  private String currencyCode;
+  private Integer decimals;
 
-  private Integer currencyDecimals;
-
-  private String currencySymbol;
+  private String symbol;
 }
