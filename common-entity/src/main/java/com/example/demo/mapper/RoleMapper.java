@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
-  injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+    injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface RoleMapper {
 
   RoleDto toDto(Role entity);

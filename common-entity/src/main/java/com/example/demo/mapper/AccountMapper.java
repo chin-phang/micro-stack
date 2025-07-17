@@ -8,7 +8,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
-    uses = { UserMapper.class },
     injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface AccountMapper {
 
