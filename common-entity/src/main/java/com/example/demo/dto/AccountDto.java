@@ -1,16 +1,15 @@
 package com.example.demo.dto;
 
 import com.example.demo.enumeration.AccountStatus;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Data
-@Builder
+@SuperBuilder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccountDto {
+public class AccountDto extends  BaseDto {
 
   private String accountNo;
 

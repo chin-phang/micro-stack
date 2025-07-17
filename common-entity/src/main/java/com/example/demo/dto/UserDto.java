@@ -1,18 +1,17 @@
 package com.example.demo.dto;
 
 import com.example.demo.enumeration.UserStatus;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@Data
-@Builder
+@SuperBuilder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
+public class UserDto extends BaseDto {
 
   private Long id;
 

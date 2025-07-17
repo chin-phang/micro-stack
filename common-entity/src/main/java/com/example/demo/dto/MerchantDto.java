@@ -2,18 +2,17 @@ package com.example.demo.dto;
 
 import com.example.demo.entity.Merchant;
 import com.example.demo.enumeration.MerchantStatus;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@Data
-@Builder
+@SuperBuilder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MerchantDto {
+public class MerchantDto extends  BaseDto {
 
   private Long id;
 
