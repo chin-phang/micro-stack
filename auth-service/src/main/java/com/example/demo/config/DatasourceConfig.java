@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EntityScan("com.wou.project.entity")
+@EntityScan("com.example.demo.entity")
 @EnableJpaRepositories(
-    basePackages = {"com.wou.project.repository"},
+    basePackages = {"com.example.demo.repository"},
     repositoryFactoryBeanClass = EntityGraphJpaRepositoryFactoryBean.class
 )
 @EnableTransactionManagement

@@ -8,7 +8,7 @@ server:
 
 spring:
   application:
-    name: payment-service
+    name: transfer-service
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource

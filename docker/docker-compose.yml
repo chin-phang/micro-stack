@@ -2,21 +2,29 @@ name: micro-stack
 
 services:
   mysql:
-    image: mysql:8.0
+    image: mysql:8.4
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=micro-stack
     ports:
       - 13306:3306
-#  redis:
-#    image: redis:7.4
-#    ports:
-#      - 6379:6379
-#  rabbitmq:
-#    image: rabbitmq:4.0-management
-#    ports:
-#      - 5672:5672
-#      - 15672:15672
+  redis:
+    image: redis:8.0
+    ports:
+      - 6379:6379
+  rabbitmq:
+    image: rabbitmq:4-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+  mailserver:
+    image: ghcr.io/docker-mailserver/docker-mailserver:latest
+    hostname: mail.example.com
+    ports:
+      - "25:25"
+      - "465:465"
+      - "587:587"
+      - "993:993"
 #  consul-server1:
 #    image: hashicorp/consul:1.19
 #    depends_on:
@@ -27,3 +35,7 @@ services:
 #      - 8600:8600/tcp
 #      - 8600:8600/udp
 #    command: consul agent -server -bootstrap-expect=1 -ui -client=0.0.0.0 -data-dir=/consul/data
+#  kafka:
+#    image: apache/kafka:latest
+#    ports:
+#      - 9092:9092

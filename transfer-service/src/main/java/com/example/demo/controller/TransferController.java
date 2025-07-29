@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/payment")
-public class PaymentController {
+@RequestMapping("/api/transfer")
+public class TransferController {
 
 }

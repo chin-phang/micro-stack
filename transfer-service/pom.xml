@@ -7,10 +7,10 @@
     <artifactId>micro-stack</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>payment-service</artifactId>
+  <artifactId>transfer-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>payment-service</name>
-  <description>Payment service</description>
+  <name>transfer-service</name>
+  <description>Transfer service</description>
 
   <properties>
     <java.version>21</java.version>
