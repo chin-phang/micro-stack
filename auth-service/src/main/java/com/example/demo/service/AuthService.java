@@ -5,6 +5,7 @@ import com.example.demo.dto.LoginResponse;
 import com.example.demo.dto.RegisterRequest;
 import com.example.demo.entity.User;
 import com.example.demo.entityGraphs.UserEntityGraphPath;
+import com.example.demo.enumeration.RoleName;
 import com.example.demo.jwt.JwtTokenProvider;
 import com.example.demo.repository.RoleRepository;
 import com.example.demo.repository.UserRepository;
@@ -34,17 +35,13 @@ public class AuthService {
     BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     String saltPassword = passwordEncoder.encode(registerReq.getPassword());
 
-    /*User user = User.builder()
-        .username(registerReq.getUsername())
-        .password(saltPassword)
-        .build();
+    User user = new User();
+    user.setUsername(registerReq.getUsername());
+    user.setPassword(saltPassword);
 
-    user.addRoles(roleRepository.findByName("ROLE_EMPLOYEE"));
-    if (registerReq.isAdmin()) {
-      user.addRoles(roleRepository.findByName("ROLE_ADMIN"));
-    }
+    user.addRole(roleRepository.findByName(RoleName.ROLE_APP_USER.name()));
 
-    userRepository.save(user);*/
+    userRepository.save(user);
   }
 
   public LoginResponse authenticate(LoginRequest loginReq) {

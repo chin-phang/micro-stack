@@ -4,7 +4,7 @@ logging:
     com.wou.project: TRACE
 
 server:
-  port: 8081
+  port: 8080
 
 spring:
   application:
@@ -26,6 +26,11 @@ spring:
       hibernate:
         format_sql: true
     show-sql: true
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
 
 security:
   jwt:
